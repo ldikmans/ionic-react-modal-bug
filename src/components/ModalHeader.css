@@ -1,0 +1,24 @@
+#modal-toolbar {
+    /* Isn't this an ion-nav color? */
+    --background: #FBFBFC;
+}
+
+#modal-title-text {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: -0.41px;
+    color: var(--ion-color-dark);
+}
+
+#modal-button-close {
+    margin-right: 14px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: -0.41px;
+    color: var(--ion-color-primary-shade);
+    text-transform: none;
+}

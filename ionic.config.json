@@ -1,0 +1,7 @@
+{
+  "name": "modalexample",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
