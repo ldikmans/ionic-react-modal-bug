@@ -1,5 +1,5 @@
 import { IonButton, IonContent, IonItem, IonLabel } from '@ionic/react';
-import React from 'react';
+import React, { Fragment } from 'react';
 import { useHistory } from 'react-router';
 import './ExploreContainer.css';
 
@@ -18,7 +18,7 @@ const ExploreContainer: React.FC<ContainerProps> = () => {
   }
 
   return (
-      <IonContent>
+      <Fragment>
         <IonItem routerLink="/modalPage">
           <IonLabel>
             Click this button to go to the modal page
@@ -31,7 +31,7 @@ const ExploreContainer: React.FC<ContainerProps> = () => {
             </IonLabel>
           <IonButton onClick={(event) => { event.preventDefault();goToSeparateModalPage() }}>Go to separate modal component page</IonButton>
         </IonItem>
-      </IonContent>
+      </Fragment>
   );
 };
 
