@@ -13,10 +13,6 @@ const ExploreContainer: React.FC<ContainerProps> = () => {
     history.push('/modalPage');
   }
 
-  function goToSeparateModalPage(){
-    history.push('/separateModal');
-  }
-
   return (
       <Fragment>
         <IonItem>
@@ -24,12 +20,6 @@ const ExploreContainer: React.FC<ContainerProps> = () => {
             Click this button to go to the modal page
             </IonLabel>
           <IonButton onClick={(event) => { event.preventDefault();goToModalPage()}}>Go to modal page</IonButton>
-        </IonItem>
-        <IonItem>
-          <IonLabel>
-            Click this button to go to the modal page with a separate modal component
-            </IonLabel>
-          <IonButton onClick={(event) => { event.preventDefault();goToSeparateModalPage()}}>Go to separate modal component page</IonButton>
         </IonItem>
       </Fragment>
   );
