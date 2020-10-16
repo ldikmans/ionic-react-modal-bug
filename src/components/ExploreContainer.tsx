@@ -23,13 +23,13 @@ const ExploreContainer: React.FC<ContainerProps> = () => {
           <IonLabel>
             Click this button to go to the modal page
             </IonLabel>
-          <IonButton onClick={() => { goToModalPage() }}>Go to modal page</IonButton>
+          <IonButton onClick={(event) => { event.preventDefault(); goToModalPage() }}>Go to modal page</IonButton>
         </IonItem>
         <IonItem>
           <IonLabel>
             Click this button to go to the modal page with a separate modal component
             </IonLabel>
-          <IonButton onClick={() => { goToSeparateModalPage() }}>Go to separate modal component page</IonButton>
+          <IonButton onClick={(event) => { event.preventDefault();goToSeparateModalPage() }}>Go to separate modal component page</IonButton>
         </IonItem>
       </IonContent>
   );
