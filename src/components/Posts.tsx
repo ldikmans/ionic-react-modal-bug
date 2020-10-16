@@ -1,13 +1,13 @@
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { Fragment, useCallback, useEffect, useState } from 'react'
 import axios from 'axios';
 import { IonButton, IonContent, IonItem, IonLabel, IonList } from '@ionic/react';
 
 interface ContainerProps { 
     error: boolean
-    closeModal: Function
+    setShowModal: Function
 }
 
-const Posts: React.FC<ContainerProps> = ({error, closeModal}) => {
+const Posts: React.FC<ContainerProps> = ({error, setShowModal}) => {
 
     const [posts, setPosts] = useState<[Post]>();
 
@@ -16,7 +16,7 @@ const Posts: React.FC<ContainerProps> = ({error, closeModal}) => {
         title: string;
     }
 
-    const getPosts = async () => {
+    const getPosts = useCallback(async () => {
         try {
              const userPosts = await axios.get("https://jsonplaceholder.typicode.com/posts")
             setPosts(userPosts.data);
@@ -26,13 +26,13 @@ const Posts: React.FC<ContainerProps> = ({error, closeModal}) => {
 
         } catch (err) {
             console.error(err.message);
-            closeModal();
+            setShowModal(false);
         }
-    };
+    },[setShowModal, error]);
 
     useEffect(() => {
         getPosts();
-    });
+    },[getPosts]);
 
    
     return (
@@ -53,7 +53,7 @@ const Posts: React.FC<ContainerProps> = ({error, closeModal}) => {
                         </IonItem>
                     ))}
                 </IonList>
-                <IonButton onClick={()=> closeModal()}>Close</IonButton>
+                <IonButton onClick={()=> setShowModal(false)}>Close</IonButton>
             </Fragment>
         </IonContent>
     );

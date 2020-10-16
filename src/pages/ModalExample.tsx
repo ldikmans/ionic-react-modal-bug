@@ -23,7 +23,7 @@ const ExploreContainer: React.FC<ContainerProps> = () => {
       cssClass='modal'
       onDidDismiss={()=> {hideModal()}}>
         <ModalHeader title="This is a modal with a header that can close" setShowModal={setShowModal} />
-        <Posts  error={throwError} closeModal={hideModal}/>
+        <Posts  error={throwError} setShowModal={setShowModal}/>
       </IonModal>
     </IonPage>
   );
