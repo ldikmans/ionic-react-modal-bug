@@ -22,9 +22,9 @@ const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
-         <Route exact path="/modalPage" render={()=><ModalExample/>} />
-        <Route exact path="/separateModal" render={()=><SeparateModal/>}/>
-        <Route exact path="/" render={() => <Home/>} />
+         <Route path="/modalPage" render={()=><ModalExample/>}  exact={true}/>
+        <Route path="/separateModal" render={()=><SeparateModal/>} exact={true}/>
+        <Route path="/" render={() => <Home/>} exact={true} />
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
