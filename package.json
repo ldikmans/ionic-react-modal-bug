@@ -41,5 +41,5 @@
     "react-scripts": "latest"
   }
   },
-  "description": "An Ionic project"
+  "description": "An Ionic to reproduce a modal bug"
 }
