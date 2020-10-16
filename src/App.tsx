@@ -2,9 +2,7 @@ import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import Home from './pages/Home';
 import ModalExample from './pages/ModalExample';
-import SeparateModal from './pages/SeparateModal';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -23,8 +21,7 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonRouterOutlet>
          <Route path="/modalPage" render={()=><ModalExample/>}  exact={true}/>
-        <Route path="/separateModal" render={()=><SeparateModal/>} exact={true}/>
-        <Route path="/" render={() => <Home/>} exact={true} />
+        <Route path="/" render={() => <ModalExample/>} exact={true} />
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
