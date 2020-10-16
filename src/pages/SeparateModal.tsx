@@ -9,7 +9,7 @@ const ExploreContainer: React.FC<ContainerProps> = () => {
     const [showModal, setShowModal] = useState(false);
 
   return (
-    <IonPage>
+    <IonPage id="home-page-visible">
       <DynamicModal open={showModal} setShowModal={setShowModal}/>
       <IonButton onClick={() => setShowModal(true)}>Show Modal</IonButton>
     </IonPage>

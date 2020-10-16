@@ -16,7 +16,7 @@ const ExploreContainer: React.FC<ContainerProps> = () => {
     }
 
   return (
-    <IonPage>
+    <IonPage id="home-page-visible">
     <IonContent>
       <IonButton onClick={() => setShowModal(true)}>Open Modal</IonButton>
       <IonButton onClick={() => {setShowModal(true); setThrowError(true)}}> Open Modal that throws and error and closes</IonButton>
