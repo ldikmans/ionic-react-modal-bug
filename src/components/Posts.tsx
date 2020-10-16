@@ -1,7 +1,6 @@
 import React, {useCallback, useEffect, useState } from 'react'
 import axios from 'axios';
 import { IonButton, IonContent, IonItem, IonLabel, IonList } from '@ionic/react';
-import { useHistory } from 'react-router';
 
 interface ContainerProps {
     error: boolean
@@ -11,16 +10,14 @@ interface ContainerProps {
 const Posts: React.FC<ContainerProps> = ({ error, setShowModal }) => {
 
     const [posts, setPosts] = useState<[Post]>();
-    const history = useHistory();
 
     interface Post {
         id: string;
         title: string;
     }
 
-    function navigateToHome(){
+    function closeModal(){
         setShowModal(false);
-        history.replace('/home', {direction: 'back'});
     }
 
     const getPosts = useCallback(async () => {
@@ -58,7 +55,7 @@ const Posts: React.FC<ContainerProps> = ({ error, setShowModal }) => {
                         </IonLabel>
                     </IonItem>
                 ))}
-                <IonButton onClick={() => {navigateToHome()}}>To the home page</IonButton>
+                <IonButton onClick={() => {closeModal()}}>Close me</IonButton>
             </IonList>
         </IonContent>
     );

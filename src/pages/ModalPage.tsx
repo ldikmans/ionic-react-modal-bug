@@ -12,7 +12,6 @@ const ModalPage: React.FC<ContainerProps> = () => {
 
   function hideModal() {
     console.log('hiding the modal');
-    setShowModal(false);
   }
 
 
