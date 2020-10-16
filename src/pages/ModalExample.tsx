@@ -1,4 +1,4 @@
-import { IonButton, IonContent, IonModal, IonPage } from '@ionic/react';
+import { IonButton, IonContent, IonItem, IonList, IonModal, IonPage } from '@ionic/react';
 import React, { useState } from 'react';
 import Posts from '../components/Posts';
 import ModalHeader from '../components/ModalHeader';
@@ -15,11 +15,16 @@ const ExploreContainer: React.FC<ContainerProps> = () => {
       setShowModal(false);
     }
 
+
+
   return (
     <IonPage id="home-page-visible">
     <IonContent>
+    <IonList>
+    <IonItem><div tabIndex={0} />Two different tests, one fails one succeeds</IonItem>
       <IonButton onClick={() => setShowModal(true)}>Open Modal</IonButton>
       <IonButton onClick={() => {setShowModal(true); setThrowError(true)}}> Open Modal that throws and error and closes</IonButton>
+    </IonList>
      
     </IonContent>
      <IonModal isOpen={showModal} 
