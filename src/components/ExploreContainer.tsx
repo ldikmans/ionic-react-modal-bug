@@ -19,11 +19,11 @@ const ExploreContainer: React.FC<ContainerProps> = () => {
 
   return (
       <IonContent>
-        <IonItem>
+        <IonItem routerLink="/modalPage">
           <IonLabel>
             Click this button to go to the modal page
             </IonLabel>
-          <IonButton onClick={(event) => { event.preventDefault(); goToModalPage() }}>Go to modal page</IonButton>
+          <IonButton>Go to modal page</IonButton>
         </IonItem>
         <IonItem>
           <IonLabel>
