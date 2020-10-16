@@ -15,7 +15,7 @@ const DynamicModal: React.FC<ContainerProps> = ({open, setShowModal}) => {
 
   function goToHomePage() {
     setShowModal(false);
-    history.replace('/home', {direction: 'back'});
+    history.replace('/', {direction: 'back'});
   }
 
   return (
