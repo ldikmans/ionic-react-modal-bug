@@ -21,9 +21,9 @@ const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
-        <Route path="/home" component={Home} />
+        <Route exact path="/home" render={()=> <Home/>} />
         <Route exact path="/" render={() => <Redirect to="/home" />} />
-        <Route path="/modalPage" component={ModalPage}/>
+        <Route exact path="/modalPage" render={() => <ModalPage/>}/>
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
